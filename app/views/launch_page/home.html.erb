@@ -1,0 +1,57 @@
+<div class="center jumbotron">
+  <h1 id="excellara">Excellara</h1>
+
+  <h2 align="center">
+    Connecting small businesses to expererienced, professional help.
+  </h2>
+
+<hr class="featurette-divider">
+      <div id="ABOUT_US">
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2>Hiring Benefits:<span class="text-muted"></span></h2>
+          <ul class="lead">
+            <li>Select candidates who are experienced in your field</li>
+            <li>Identify candidates quickly and easily</li>
+            <li>Fill short-term/part time work with talent only a recruiting agency could previously find</li>
+          </ul>
+        </div>
+        <div class="col-md-5">
+          <h2>Job Posting Benefits:<span class="text-muted"></span></h2>
+          <ul class="lead">
+            <li>No small businesses can post, only indivaiduals</li>
+            <li>Your experience is valued, pick your job or wait for it to come to you</li>
+            <li>Earn money on your time</li>
+          </ul>
+        </div>
+      </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div id="CONTACT_US">
+        <div>
+          <div style="display: inline-block" align="left">
+            <h2 vertical-align: "text-top">Leave your email and we'll let </br> you know when we're up </br> and running!<span class="text-muted"></span></h2>
+          </div>
+          <div id="sign-up">
+          <%= form_for home_path, :method => "GET" do%>
+            <div><%= text_field_tag :email, nil, placeholder: "example@email.com", :class => "form-inline" %></div></br>
+            <%= radio_button_tag(:role, "hireRP")%>
+            <%= label_tag(:role_desc, "I'm Interested In Hiring Retired Professionals") %> </br>
+            <%= radio_button_tag(:role, "hireMBA")%>
+            <%= label_tag(:role_desc, "I'm Interested In Hiring Freshly Minted MBA's") %> </br>
+            <%= radio_button_tag(:role, "work")%>
+            <%= label_tag(:role_desc, "I'm Here to To Find Short Term Work") %> </br> </br>
+            <%= submit_tag "Sign Me Up!", class: "btn btn-primary"%> </br>
+            <% flash.each do |message_type, message| %>
+            <div style="padding-top: 20px" class="alert alert-<%= message_type %>"><%= message %></div>
+            <% end %>
+          <% end %>
+        </div>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+</div>

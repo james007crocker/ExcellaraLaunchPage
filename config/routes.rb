@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  root 'launch_page#home'
+  match 'home' => 'launch_page#home', :via => [:post, :get]
+  #get   'launch_page/mail' => 'launch_page#mail', :as => 'launch_movie'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
