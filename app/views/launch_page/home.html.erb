@@ -149,7 +149,7 @@
                 <div class="col-lg-6">
                   <div id="sign-up">
                     <%= form_for home_path, :method => "GET" do%>
-                    <div><%= text_field_tag :email, nil, placeholder: "example@email.com", :class => "form-inline" %></div></br>
+                    <div><%= text_field_tag :email, nil, placeholder: "example@email.com", :style => "background-color: black" %></div></br>
                     <%= radio_button_tag(:role, "hireRP")%>
                     <%= label_tag(:role_desc, "I'm Interested In Hiring Retired Professionals") %> </br>
                     <%= radio_button_tag(:role, "hireMBA")%>
