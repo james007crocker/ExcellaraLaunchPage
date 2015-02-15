@@ -21,7 +21,7 @@
                         <a href="#services">Services</a>
                     </li> -->
                     <li>
-                        <a href="#contact">Contact</a>
+                        <a href="#contact">Sign-up</a>
                     </li>
                 </ul>
             </div>
@@ -38,11 +38,11 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="intro-message">
-                        <h1 style="text-shadow: 10px 10px 30px #000000">Excellara</h1>
-                        <h3 style="text-shadow: 10px 10px 30px #000000">Connecting Small Businesses with Experienced Help</h3>
+                        <h1 style="text-shadow: 0px 0px 30px #000, -1px -1px #000, 1px 1px #000">Excellara</h1>
+                        <h3 style="text-shadow: 0px 0px 30px #000, -1px -1px #000, 1px 1px #000">Connecting Small Businesses with Experienced Help</h3>
                         <hr class="intro-divider">
                         <!--<ul class="list-inline intro-social-buttons">
-                            <li>
+                            <li>, :style => "text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000"
                                 <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
                             </li>
                             <li>
@@ -74,9 +74,9 @@
                     <div class="clearfix"></div>
                     <h2 class="section-heading">Our Offerings for Small Businesses:<br></h2>
                     <ul class="lead">
-                        <li>Select candidates who are experienced in your field </li>
-                        <li>Identify candidates quickly and easily </li>
-                        <li> Fill short-term/part time work with talent only a recruiting agency could previously find </li>
+                        <li>Select experienced candidates </li> </br>
+                        <li>Fill positions quickly and easily </li></br>
+                        <li>Open your business to untapped potential </li>
                     </ul>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
@@ -100,8 +100,8 @@
                     <div class="clearfix"></div>
                     <h2 class="section-heading">Our Offerings for Retirees<br></h2>
                     <ul class="lead">
-                        <li>No small businesses can post, only individuals</li>
-                        <li>Your experience is valued, pick your job or wait for it to come to you</li>
+                        <li>Work without comprimising your retirement</li></br>
+                        <li>Have your skills and experience valued</li></br>
                         <li>Earn money on your time</li>
                     </ul>
                 </div>
@@ -144,18 +144,18 @@
 
             <div class="row">
                 <div class="col-lg-6">
-                <h2>Leave your email and we'll let you know when we're up and running!</h2>
+                <h2 style="text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000">Leave your email and we'll let you know when we're up and running!</h2></br>
                 </div>
                 <div class="col-lg-6">
                   <div id="sign-up">
                     <%= form_for home_path, :method => "GET" do%>
                     <div><%= text_field_tag :email, nil, placeholder: "example@email.com", :style => "color: black" %></div></br>
                     <%= radio_button_tag(:role, "hireRP")%>
-                    <%= label_tag(:role_desc, "I'm Interested In Hiring Retired Professionals") %> </br>
+                    <%= label_tag(:role_desc, "I'm Interested In Hiring Retired Professionals", :style => "text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000") %> </br>
                     <%= radio_button_tag(:role, "hireMBA")%>
-                    <%= label_tag(:role_desc, "I'm Interested In Hiring Freshly Minted MBA's") %> </br>
+                    <%= label_tag(:role_desc, "I'm Interested In Hiring Recent Graduates", :style => "text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000") %> </br>
                     <%= radio_button_tag(:role, "work")%>
-                    <%= label_tag(:role_desc, "I'm Here to To Find Short Term Work") %> </br> </br>
+                    <%= label_tag(:role_desc, "I'm Here to To Find Short Term Work", :style => "text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000") %> </br> </br>
                     <%= submit_tag "Sign Me Up!", class: "btn btn-primary"%> </br>
                     <% flash.each do |message_type, message| %>
                     <div style="padding-top: 20px" class="alert alert-<%= message_type %>"><%= message %></div>

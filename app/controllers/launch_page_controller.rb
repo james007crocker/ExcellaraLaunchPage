@@ -8,7 +8,7 @@ class LaunchPageController < ApplicationController
     if params["commit"] == "Sign Me Up!"
       if @email != "" 
         UserMailer.welcome_email(@email, @role).deliver_later
-        flash[:success] = "SUCCES! You have been added to our waiting list!"
+        flash[:success] = "SUCCESS! You have been added to our waiting list!"
       else 
         flash[:danger] = "Please enter a valid email!"
       end
