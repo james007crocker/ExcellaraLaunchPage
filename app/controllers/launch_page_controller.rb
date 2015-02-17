@@ -2,12 +2,13 @@ class LaunchPageController < ApplicationController
   def home
     @email = params["email"]
     @role = params["role"]
+    @field = params["field"]
     if @role == ""
       @role = "None Selected"
     end
-    if params["commit"] == "Sign Me Up!"
+    if params["commit"] == "Sign Me Up!" && @email != ""
       if @email != "" 
-        UserMailer.welcome_email(@email, @role).deliver_later
+        UserMailer.welcome_email(@email, @role, @field).deliver_later
         flash[:success] = "SUCCESS! You have been added to our waiting list!"
       else 
         flash[:danger] = "Please enter a valid email!"

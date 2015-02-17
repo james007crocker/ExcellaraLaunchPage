@@ -1,5 +1,5 @@
 <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation" xmlns="http://www.w3.org/1999/html">
         <div class="container topnav">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -150,12 +150,26 @@
                   <div id="sign-up">
                     <%= form_for home_path, :method => "GET" do%>
                     <div><%= text_field_tag :email, nil, placeholder: "example@email.com", :style => "color: black" %></div></br>
-                    <%= radio_button_tag(:role, "hireRP")%>
+                    <%= radio_button_tag(:role, "hireRP", :checked => "checked")%>
                     <%= label_tag(:role_desc, "I'm Interested In Hiring Retired Professionals", :style => "text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000") %> </br>
                     <%= radio_button_tag(:role, "hireMBA")%>
                     <%= label_tag(:role_desc, "I'm Interested In Hiring Recent Graduates", :style => "text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000") %> </br>
                     <%= radio_button_tag(:role, "work")%>
                     <%= label_tag(:role_desc, "I'm Here to To Find Short Term Work", :style => "text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000") %> </br> </br>
+                    <%= label_tag(:role_desc, "Which field are you interested in?", :id =>"dynamic_label", :style => "text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000") %> </br>
+                    <%= text_field_tag :field, nil, placeholder: "Law, accounting etc.", :style => "color: black" %> </br> </br>
+                    <!--<script>
+                      function changeText(){
+                          var label_text = "";
+                          if (document.getElementById('role_hireRP').checked || document.getElementById('role_hireMBA').checked) {
+                              label_text = "Which field are you hiring in?";
+                          } else if (document.getElementById('role_work').checked) {
+                              label_text = "Which field are you trained in?";
+                          }
+                          document.getElementById('dynamic_label').innerHTML = label_text;
+                      }
+                    </script> -->
+
                     <%= submit_tag "Sign Me Up!", class: "btn btn-primary"%> </br>
                     <% flash.each do |message_type, message| %>
                     <div style="padding-top: 20px" class="alert alert-<%= message_type %>"><%= message %></div>
