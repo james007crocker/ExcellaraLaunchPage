@@ -1,5 +1,6 @@
 class LaunchPageController < ApplicationController
   def home
+    @name = params["name"]
     @email = params["email"]
     @role = params["role"]
     @field = params["field"]
@@ -8,7 +9,12 @@ class LaunchPageController < ApplicationController
     end
     if params["commit"] == "Sign Me Up!" && @email != ""
       if @email != "" 
-        UserMailer.welcome_email(@email, @role, @field).deliver_later
+        UserMailer.welcome_email(@name, @email, @role, @field).deliver_later
+
+        if @email =~ /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
+          UserMailer.waiting_list_email(@name, @email).deliver_later
+        end
+
         flash[:success] = "SUCCESS! You have been added to our waiting list!"
       else 
         flash[:danger] = "Please enter a valid email!"
