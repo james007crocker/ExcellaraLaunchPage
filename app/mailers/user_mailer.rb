@@ -5,7 +5,7 @@ class UserMailer < ApplicationMailer
 		@email = email
 		@role = role
     @field = field
-		mail(to: "james@excellara.com", subject:"Excellara Sign-Up")
+		mail(to: "lauren@excellara.com", subject:"Excellara Sign-Up")
   end
 
   def waiting_list_email(name, email)
