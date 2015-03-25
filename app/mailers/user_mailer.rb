@@ -15,6 +15,6 @@ class UserMailer < ApplicationMailer
 
   def pilot_email(email2)
     @email2 = email2
-    mail(to: "admin@excellara.com" , subject:"Pilot Interest")
+    mail(to: "lauren@excellara.com" , subject:"Pilot Interest")
   end
 end
