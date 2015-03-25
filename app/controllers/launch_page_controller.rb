@@ -1,9 +1,14 @@
 class LaunchPageController < ApplicationController
   def home
+    @email2 = params["email2"]
     @name = params["name"]
     @email = params["email"]
     @role = params["role"]
     @field = params["field"]
+    if !@email2.nil?
+      UserMailer.pilot_email(@email2).deliver_later
+      flash.now[:success] = "Thanks for showing interest in the pilot. We will get back to you soon!"
+    end
     if @role == ""
       @role = "None Selected"
     end

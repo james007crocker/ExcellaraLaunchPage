@@ -15,10 +15,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="#services">Services</a>
+                        <a href="#services">About</a>
                     </li>
                     <li>
-                        <a href="#about">About</a>
+                        <a href="#team">Team</a>
                     </li>
                     <li>
                         <a href="#contact">Sign-up</a>
@@ -31,10 +31,14 @@
     </nav>
 
 
+
     <!-- Header -->
     <div class="intro-header">
+      </br>
         <div class="container">
-
+          <% flash.each do |message_type, message| %>
+              <div style="padding-top: 20px" class="alert alert-<%= message_type %>"><%= message %></div>
+          <% end %>
             <div class="row">
                 <div class="col-lg-12">
                     <div class="intro-message">
@@ -74,7 +78,12 @@
                     <h3 class="section-heading">&nbsp Excellara is an online platform that matches semi-retired professionals with businesses
                       looking to hire experienced help on a part-time or contract basis.  Qualified professionals may come from a variety
                       of industries including accounting, law, manufacturing, healthcare, and academia. <br></h3>
-
+                  <div class="form-inline">
+                    <%= form_for home_path, :method => "GET" do%>
+                        <%= text_field_tag :email2, nil, placeholder: "example@email.com", :style => "color: black", class: 'form-control' %>
+                        <%= submit_tag "Sign-Up For Pilot", class: "btn btn-primary"%> </br></br></br>
+                    <% end %>
+                    </div>
                 </div>
               </div>
         </div>
@@ -131,7 +140,7 @@
 
     </div>
     <!-- /.content-section-b -->
-<a  name="about"></a>
+<a  name="team"></a>
     <div class="content-section-a">
 
         <div  class="container">
@@ -208,9 +217,7 @@
                     </script> -->
 
                     <%= submit_tag "Sign Me Up!", class: "btn btn-primary"%> </br></br></br>
-                    <% flash.each do |message_type, message| %>
-                    <div style="padding-top: 20px" class="alert alert-<%= message_type %>"><%= message %></div>
-                  <% end %>
+
                   <% end %>
                 </div>
                     <!-- <ul class="list-inline banner-social-buttons">
@@ -256,7 +263,7 @@
                             <a href="#contact">Contact</a>
                         </li>
                     </ul>-->
-                    <p class="copyright text-muted small">Excellara 2015.</p>
+                    <p class="copyright text-muted small" align="right">Contact: admin@excellara.com          Excellara 2015. </p>
                 </div>
             </div>
         </div>
@@ -276,5 +283,5 @@
     <!--<script src="jquery.js"></script>-->
 
     <!-- Bootstrap Core JavaScript -->
-    <!--<script src="bootstrap.min.js"></script>-->          
+    <!--<script src="bootstrap.min.js"></script>-->
 
