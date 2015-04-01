@@ -14,6 +14,9 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
+                  <li>
+                    <a href="#current">Current Opportunities</a>
+                  </li>
                     <li>
                         <a href="#services">About</a>
                     </li>
@@ -137,6 +140,42 @@
 
         </div>
         <!-- /.container -->
+
+    </div>
+<a  name="current"></a>
+    <div class="content-section-a">
+      <div class="container">
+        <div align="center">
+          <div class="row">
+            <h1 class="section-heading" align="center">Current Opportunities</h1>
+            <div style="width: 500px">
+              <hr class="section-heading-spacer2" align="center">
+              <div class="clearfix"></div>
+              <h2 class="section-heading">Priority Management, Sales, Vancouver<br></h2>
+              <ul class="lead">
+                <p align="left">Has your career as a professional sales person in your last position wound down?
+                  <br><br>
+                  Would you like to work in a part-time customer account position with a 35 year old Vancouver based company doing business in more than 70 offices around the world?
+                  <br><br>
+                  We’re Priority Management, a company delivering effectiveness and productivity training to small and large businesses, organizations of all descriptions and to different levels of government. And we are looking for an individual to represent us in the lower mainland.
+                  <br><br>
+                  We are well respected in the industry and known to offer a premium product at a premium price. Our market is growing and we are looking for individuals who love talking to people, uncovering their needs and helping them find solutions.
+                  <br><br>
+                  Join our dynamic team and stay active in business at your own pace, with like-minded people who really make a difference in their customers’ lives.
+                </p>
+                <div class="form-inline">
+                  <%= form_for home_path, :method => "GET" do%>
+                      <%= text_field_tag :email3, nil, placeholder: "example@email.com", :style => "color: black", class: 'form-control' %>
+                      <%= submit_tag "Apply for Position", class: "btn btn-success"%> </br></br></br>
+                  <% end %>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- /.container -->
 
     </div>
     <!-- /.content-section-b -->

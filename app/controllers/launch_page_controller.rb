@@ -1,13 +1,22 @@
 class LaunchPageController < ApplicationController
   def home
+    @email3 = params["email3"]
     @email2 = params["email2"]
     @name = params["name"]
     @email = params["email"]
     @role = params["role"]
     @field = params["field"]
+    if !@email3.nil?
+      UserMailer.job_email(@email3).deliver_later
+      flash.now[:success] = "Thank you for your interest in the Priority Management position. We will get back to you soon!"
+      params.delete :email3
+      @email3 = nil
+    end
     if !@email2.nil?
       UserMailer.pilot_email(@email2).deliver_later
       flash.now[:success] = "Thanks for showing interest in the pilot. We will get back to you soon!"
+      params.delete :email2
+      @email2 = nil
     end
     if @role == ""
       @role = "None Selected"
