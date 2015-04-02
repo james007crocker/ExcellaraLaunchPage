@@ -1,2 +1,5 @@
-The following is interested in the Priority Management Sales Position:
-<%= @email3 %>
+The following is interested in <%= @opp %>:
+Name: <%= @name %>
+Email: <%= @email %>
+Message:
+<%=simple_format(word_wrap( @text, line_width: 100)) %>

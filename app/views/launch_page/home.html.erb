@@ -15,7 +15,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                   <li>
-                    <a href="#current">Current Opportunities</a>
+                    <a href="#current">Opportunities</a>
+                  </li>
+                  <li>
+                    <a href="#candidate">Candidates</a>
                   </li>
                     <li>
                         <a href="#services">About</a>
@@ -75,7 +78,6 @@
         <div align="center">
               <div class="container">
                 <div class="row">
-
                     <hr align="center" class="section-heading-spacer2">
                     <div class="clearfix"></div>
                     <h3 class="section-heading">&nbsp Excellara is an online platform that matches semi-retired professionals with businesses
@@ -147,7 +149,7 @@
       <div class="container">
         <div align="center">
           <div class="row">
-            <h1 class="section-heading" align="center">Current Opportunities</h1>
+            <h1 class="section-heading" align="center">Opportunities</h1>
             <div style="width: 500px">
               <hr class="section-heading-spacer2" align="center">
               <div class="clearfix"></div>
@@ -164,9 +166,9 @@
                   Join our dynamic team and stay active in business at your own pace, with like-minded people who really make a difference in their customers’ lives.
                 </p>
                 <div class="form-inline">
-                  <%= form_for home_path, :method => "GET" do%>
-                      <%= text_field_tag :email3, nil, placeholder: "example@email.com", :style => "color: black", class: 'form-control' %>
-                      <%= submit_tag "Apply for Position", class: "btn btn-success"%> </br></br></br>
+                  <%= form_tag url_for(:controller => 'launch_page', :action => 'apply'), :method => 'get' do %>
+                      <%= hidden_field_tag :opp_apply, "Priority Management, Sales, Vancouver"%>
+                      <%= submit_tag "Apply", class: "btn btn-success"%> </br></br></br>
                   <% end %>
                 </div>
               </ul>
@@ -179,6 +181,47 @@
 
     </div>
     <!-- /.content-section-b -->
+<a  name="candidate"></a>
+<div class="content-section-b">
+
+  <div class="container">
+    <div align="center">
+      <div class="row">
+        <h1 class="section-heading" align="center">Candidates</h1>
+        <div style="width: 500px">
+          <hr class="section-heading-spacer2" align="center">
+          <div class="clearfix"></div>
+          <h2 class="section-heading">Brian Cole, Vancouver<br></h2>
+          <ul class="lead">
+            <p align="left">Brian holds a Bachelor of Applied Science in Electrical Engineering from the University of
+              Toronto and a Masters Degree in Business Administration from the Ivey School of Business at
+              the University of Western Ontario.  Brian worked as a member of the management group at
+              Vancouver Community College where he was responsible for their Business Continuing
+              Studies program and marketing their training programs to Businesses, the Government, and
+              other Organizations. Brian has taught numerous subjects in the fields of business and
+              marketing at Simon Fraser University, BCIT, and Kwantlen University.  His business
+              experience includes Senior Management positions with General Telephone and Electronics
+              (GTE) (now Verizon ) and  Enbridge.  Brian keeps involved with community initiatives in his
+              role as a Chairman with Canada Singapore Business Association, Vancouver Community
+              Council, Salvation Army, and Belkin House.
+              <br><br>
+              Brian is looking for a position that will allow him to utilize his skills and experience in marketing, strategic planning or sales.
+            </p>
+            <div class="form-inline">
+              <%= form_tag url_for(:controller => 'launch_page', :action => 'apply'), :method => 'get' do%>
+                  <%= hidden_field_tag :opp_apply, "Brian Cole, Vancouver"%>
+                  <%= submit_tag "Apply", class: "btn btn-success"%> </br></br></br>
+              <% end %>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.container -->
+
+</div>
+
 <a  name="team"></a>
     <div class="content-section-a">
 

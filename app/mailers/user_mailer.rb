@@ -18,8 +18,11 @@ class UserMailer < ApplicationMailer
     mail(to: "lauren@excellara.com" , subject:"Pilot Interest")
   end
 
-  def job_email(email3)
-    @email3 = email3
-    mail(to: "lauren@excellara.com", subject: "Priority Management Interest")
+  def job_email(name, email, text, opp)
+    @email = email
+    @name = name
+    @text = text
+    @opp = opp
+    mail(to: "lauren@excellara.com", subject: "Application " + @opp)
   end
 end
