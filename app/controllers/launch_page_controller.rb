@@ -1,15 +1,17 @@
 class LaunchPageController < ApplicationController
   def home
     @email2 = params["email2"]
+    @name2 = params["name2"]
     @name = params["name"]
     @email = params["email"]
     @role = params["role"]
     @field = params["field"]
     if !@email2.nil?
-      UserMailer.pilot_email(@email2).deliver_later
-      flash.now[:success] = "Thanks for showing interest in the pilot. We will get back to you soon!"
-      params.delete :email2
-      @email2 = nil
+      unless @email2.blank? || @name2.blank?
+        UserMailer.pilot_email(@email2, @name2).deliver_later
+        flash.now[:success] = "Thanks for showing interest in the pilot. We will get back to you soon!"
+        params.delete :email2
+      end
     end
     if @role == ""
       @role = "None Selected"
@@ -38,8 +40,10 @@ class LaunchPageController < ApplicationController
     @name = params["name_apply"]
     @text = params["text_apply"]
     @opp = params["opp_apply"]
-    UserMailer.job_email(@name, @email, @text, @opp).deliver_later
-    flash[:success] = "Thank you for your interest. We will get back to you soon!"
+    unless @email.blank? || @name.blank?
+      UserMailer.job_email(@name, @email, @text, @opp).deliver_later
+      flash[:success] = "Thank you for your interest. We will get back to you soon!"
+    end
     redirect_to root_path
   end
  #

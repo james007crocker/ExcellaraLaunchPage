@@ -85,7 +85,8 @@
                       of industries including accounting, law, manufacturing, healthcare, and academia. <br></h3>
                   <div class="form-inline">
                     <%= form_for home_path, :method => "GET" do%>
-                        <%= text_field_tag :email2, nil, placeholder: "example@email.com", :style => "color: black", class: 'form-control' %>
+                        <%= text_field_tag :name2, nil, placeholder: "Name", :style => "color: black", class: 'form-control' %>
+                        <%= text_field_tag :email2, nil, placeholder: "Email", :style => "color: black", class: 'form-control' %>
                         <%= submit_tag "Sign-Up For Pilot", class: "btn btn-primary"%> </br></br></br>
                     <% end %>
                     </div>
@@ -155,16 +156,36 @@
               <div class="clearfix"></div>
               <h2 class="section-heading">Priority Management, Sales, Vancouver<br></h2>
               <ul class="lead">
-                <p align="left">Has your career as a professional sales person in your last position wound down?
-                  <br><br>
-                  Would you like to work in a part-time customer account position with a 35 year old Vancouver based company doing business in more than 70 offices around the world?
-                  <br><br>
-                  We’re Priority Management, a company delivering effectiveness and productivity training to small and large businesses, organizations of all descriptions and to different levels of government. And we are looking for an individual to represent us in the lower mainland.
-                  <br><br>
-                  We are well respected in the industry and known to offer a premium product at a premium price. Our market is growing and we are looking for individuals who love talking to people, uncovering their needs and helping them find solutions.
-                  <br><br>
-                  Join our dynamic team and stay active in business at your own pace, with like-minded people who really make a difference in their customers’ lives.
-                </p>
+                <p align="left">
+                  Looking for Dixie ……
+                  <br>
+                  <br>
+                  We’re trying to replace Dixie.
+                  <br>
+                  Your name doesn’t have to be Dixie.  You don’t have to be 65 years young like the
+                  woman we hired named Dixie who was with us for six years before she left to go to the
+                  US and start her own business.  You don’t have to work only mornings and refuse to
+                  drive all over the lower mainland like Dixie did.  Nor must you have the best writing
+                  skills EVER, as Dixie had.
+                  <br>
+                  What you DO need is the drive and ability to make contacts, build relation-ships and
+                  close business, just like Dixie did.
+                  <br>
+                  Has your career as a professional sales person in your last position wound down?
+                  Would you like to work in a part-time customer account position with a 35 year old
+                  Vancouver based company doing business in more than 70 offices around the world?
+                  We’re <i>Priority Management</i>, a company delivering effectiveness and productivity
+                  training to small and large businesses, organizations of all descriptions and to different
+                  levels of government.  And we are looking for an individual to represent us in the lower
+                  mainland.
+                  <br>
+                  We are well respected in the industry and known to offer a premium product at a
+                  premium price.  Our market is growing and we are looking for individuals who love
+                  talking to people, uncovering their needs and helping them find solutions.
+                  Join our dynamic team and stay active in business at your own pace, with like-minded
+                  people who really make a difference in their customers’ lives.
+
+                <p align="center"><i>Come, be our new Dixie.</i></p>
                 <div class="form-inline">
                   <%= form_tag url_for(:controller => 'launch_page', :action => 'apply'), :method => 'get' do %>
                       <%= hidden_field_tag :opp_apply, "Priority Management, Sales, Vancouver"%>
@@ -188,29 +209,57 @@
     <div align="center">
       <div class="row">
         <h1 class="section-heading" align="center">Candidates</h1>
-        <div style="width: 500px">
+        <div style="width: 500px; display: inline-block">
           <hr class="section-heading-spacer2" align="center">
           <div class="clearfix"></div>
           <h2 class="section-heading">Brian Cole, Vancouver<br></h2>
           <ul class="lead">
-            <p align="left">Brian holds a Bachelor of Applied Science in Electrical Engineering from the University of
-              Toronto and a Masters Degree in Business Administration from the Ivey School of Business at
-              the University of Western Ontario.  Brian worked as a member of the management group at
-              Vancouver Community College where he was responsible for their Business Continuing
-              Studies program and marketing their training programs to Businesses, the Government, and
-              other Organizations. Brian has taught numerous subjects in the fields of business and
-              marketing at Simon Fraser University, BCIT, and Kwantlen University.  His business
-              experience includes Senior Management positions with General Telephone and Electronics
-              (GTE) (now Verizon ) and  Enbridge.  Brian keeps involved with community initiatives in his
-              role as a Chairman with Canada Singapore Business Association, Vancouver Community
-              Council, Salvation Army, and Belkin House.
+            <p align="left">Brian holds a Bachelor of Applied Science in Electrical Engineering from the University
+              of Toronto and a Masters Degree in Business Administration from the Ivey School of
+              Business at the University of Western Ontario.  Brian worked as a member of the
+              management group at Vancouver Community College where he was responsible for
+              their Business Continuing Studies program and marketing their training programs to
+              Businesses, the Government, and other Organizations. Brian has taught numerous
+              subjects in the fields of business and marketing at Simon Fraser University, BCIT, and
+              Kwantlen University.  His business experience includes Senior Management positions
+              with General Telephone and Electronics (GTE) (now Verizon ), Enbridge and operating
+              his own consulting company.  Brian has considerable International experience and
+              connections in a number of countries including the Peoples, Republic of China
+              and other parts of Asia.  Brian keeps involved with community initiatives in his roles as
+              Chairman, Canada Singapore Business Association, Greater Vancouver Advisory Board
+              and Chair, Advisory Board, Belkin Housel, Salvation Army, and Director, Ivey Business
+              School BC Alumni Association.
               <br><br>
-              Brian is looking for a position that will allow him to utilize his skills and experience in marketing, strategic planning or sales.
+              Brian is seeking a part-time position that will allow him to utilize his skills and experience
+              in leadership, general management, marketing, strategic planning or sales in either a for profit
+              or non profit organization.
             </p>
             <div class="form-inline">
               <%= form_tag url_for(:controller => 'launch_page', :action => 'apply'), :method => 'get' do%>
                   <%= hidden_field_tag :opp_apply, "Brian Cole, Vancouver"%>
-                  <%= submit_tag "Apply", class: "btn btn-success"%> </br></br></br>
+                  <%= submit_tag "I'm Interested", class: "btn btn-success"%> </br></br></br>
+              <% end %>
+            </div>
+          </ul>
+        </div>
+
+        <div style="width: 500px;display: inline-block; vertical-align: top">
+          <hr class="section-heading-spacer2" align="center">
+          <div class="clearfix"></div>
+          <h2 class="section-heading">Dustin Caldwell, Vancouver<br></h2>
+          <ul class="lead">
+            <p align="left">Dustin has a background in the banking industry and worked his way up from a savings
+              teller to a credit officer during his career at the bank.  After moving away from the finance industry,
+              he found his place in the healthcare industry working as a caretaker for the elderly and children.
+              Dustin loves interacting with people and has a special talent for taking care of people and making them
+              feel comfortable.  His colleagues would describe him as intuitive and attentive. Dustin is looking for
+              a part-time job where he could continue to use his experience in either the banking or healthcare
+              industries.  He enjoys a job that allows him to remain independent and work with people.
+            </p>
+            <div class="form-inline">
+              <%= form_tag url_for(:controller => 'launch_page', :action => 'apply'), :method => 'get' do%>
+                  <%= hidden_field_tag :opp_apply, "Dustin, Vancouver"%>
+                  <%= submit_tag "I'm Interested", class: "btn btn-success"%> </br></br></br>
               <% end %>
             </div>
           </ul>
