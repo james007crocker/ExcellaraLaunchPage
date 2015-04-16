@@ -151,7 +151,7 @@
         <div align="center">
           <div class="row">
             <h1 class="section-heading" align="center">Opportunities</h1>
-            <div style="width: 500px">
+            <div style="width: 40%;display: inline-block">
               <hr class="section-heading-spacer2" align="center">
               <div class="clearfix"></div>
               <h2 class="section-heading">Priority Management, Sales, Vancouver<br></h2>
@@ -194,6 +194,50 @@
                 </div>
               </ul>
             </div>
+
+            <div style="width: 40%;display: inline-block; vertical-align: top">
+                <hr class="section-heading-spacer2" align="center">
+                <div class="clearfix"></div>
+                <h2 class="section-heading">PLAN - Community Connector, Vancouver - Lower Mainland<br></h2>
+                <ul class="lead">
+                  <p align="left">
+                    We are looking for Community Connectors – personal network facilitators who connect people
+                    with one another. If you are a natural connector of people, we would like to hear from you!
+                    PLAN supports Community Connectors to build personal networks around people who are socially
+                    isolated. Our belief is that we are all happier, safer and more secure when surrounded by a
+                    network of people who love and care about us. This is an amazing opportunity to help people
+                    discover and nurture meaningful friendships and connections with others.
+                    <br>
+                    <br>
+                    <strong>
+                      If you are a natural connector of people, believe that everyone has personal gifts and talents
+                      to share, and are passionate about your community, then this is the job for you!
+                    </strong>
+                    <br>
+                    <br>
+                    <i>
+                    A Community Connector is a social network facilitator who helps people with disabilities nurture
+                    the relationships in their lives while adding to their circle of friends. They make it easy to get
+                    together (like a trip to the beach, a concert, or a poker night) with family and friends. They
+                    attend events in the community and sometimes help with the introductions to others in the group
+                    to meet new people. They assist in initial meetings of new friends, then get to watch as connections
+                    grow naturally.
+                    </i>
+                    <br>
+                    <br>
+                  <strong>
+                    Does this work excite you? If so, then we would like to meet you!
+                  </strong>
+                    </p>
+                <div class="form-inline">
+                  <%= form_tag url_for(:controller => 'launch_page', :action => 'apply'), :method => 'get' do%>
+                      <%= hidden_field_tag :opp_apply, "PLAN - Community Connector, Vancouver - Lower Mainland"%>
+                      <%= submit_tag "Apply", class: "btn btn-success"%> </br></br></br>
+                  <% end %>
+                </div>
+              </ul>
+            </div>
+
           </div>
         </div>
 
@@ -209,7 +253,7 @@
     <div align="center">
       <div class="row">
         <h1 class="section-heading" align="center">Candidates</h1>
-        <div style="width: 500px; display: inline-block">
+        <div style="width: 30%; display: inline-block">
           <hr class="section-heading-spacer2" align="center">
           <div class="clearfix"></div>
           <h2 class="section-heading">Brian Cole, Vancouver<br></h2>
@@ -243,7 +287,7 @@
           </ul>
         </div>
 
-        <div style="width: 500px;display: inline-block; vertical-align: top">
+        <div style="width: 30%;display: inline-block; vertical-align: top">
           <hr class="section-heading-spacer2" align="center">
           <div class="clearfix"></div>
           <h2 class="section-heading">Dustin Caldwell, Vancouver<br></h2>
@@ -259,6 +303,40 @@
             <div class="form-inline">
               <%= form_tag url_for(:controller => 'launch_page', :action => 'apply'), :method => 'get' do%>
                   <%= hidden_field_tag :opp_apply, "Dustin, Vancouver"%>
+                  <%= submit_tag "I'm Interested", class: "btn btn-success"%> </br></br></br>
+              <% end %>
+            </div>
+          </ul>
+        </div>
+
+        <div style="width: 30%;display: inline-block; vertical-align: top">
+          <hr class="section-heading-spacer2" align="center">
+          <div class="clearfix"></div>
+          <h2 class="section-heading">April Lewis, Vancouver<br></h2>
+          <ul class="lead">
+            <p align="left">April Lewis is a writer, public speaking coach, retired social worker, and communications
+              expert.  Her varied career boasts over 30 years of experience in hospital social work and management and
+              a career in public speaking as an instructor at Douglas College in Public Speaking and Leadership in Action.
+              <br>
+              <br>
+              Her credentials include a bachelor and master of Social Work from UBC, a certificate in communication at Dale
+              Carnegie and Associates, a diploma in Broadcast Journalism from BCIT and numerous Toastmaster’s awards.  Her
+              education took her abroad to Paris where she went to the Sorbonne to learn French and then to London where
+              she worked as a bilingual secretary.
+              <br>
+              <br>
+              April continues to use her communication skills through her work as the B.C. Representative for CARP – A New
+              Vision of Aging for Canada as well as the Communications Director for the White Rock/Surrey Chapter. She is
+              also a monthly  Zoomer columnist for the Peach Arch News and is a private public speaking coach.
+              <br>
+              <br>
+              April’s experience coupled with her entrepreneurial spirit makes her a great candidate for any part-time
+              positions in leadership or event planning, or consulting. She is looking for a position that will utilize
+              her public speaking, communication, and writing skills.
+            </p>
+            <div class="form-inline">
+              <%= form_tag url_for(:controller => 'launch_page', :action => 'apply'), :method => 'get' do%>
+                  <%= hidden_field_tag :opp_apply, "April Lewis, Vancouver"%>
                   <%= submit_tag "I'm Interested", class: "btn btn-success"%> </br></br></br>
               <% end %>
             </div>
