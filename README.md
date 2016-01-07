@@ -1,4 +1,4 @@
-== Excellara Landing Page
+##Excellara Landing Page
 
 This project acted as the landing page for Excellara while the main website was being completed. A small selection of open job positions and interested
 job candidates were displayed on the site along with a short description of what Excellara was. A minimal functionality application process was also implemented to handle interest prior to the full site launch. While this landing page was live, Excellara signed up over 40 interested businesses and candidates for the service.
@@ -10,4 +10,5 @@ job candidates were displayed on the site along with a short description of what
 
 	Clone this repository, navigate to the hello_app folder containing the project, and enter "rails server" on the command line.
 	Open a browser window and navigate to localhost:3000. The landing page will be displayed in the page.
+
 
