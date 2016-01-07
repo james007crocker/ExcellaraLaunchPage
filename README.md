@@ -8,7 +8,11 @@ job candidates were displayed on the site along with a short description of what
 
 <b>Deployment instructions:</b>
 
-	Clone this repository, navigate to the hello_app folder containing the project, and enter "rails server" on the command line.
-	Open a browser window and navigate to localhost:3000. The landing page will be displayed in the page.
+Clone this repository, navigate to the hello_app folder containing the project, and enter "rails server" on the command line.
+Open a browser window and navigate to localhost:3000. The landing page will be displayed in the page.
+
+A screen capture of the top portion of the page can be seen below:
+
+![Alt text](https://github.com/james007crocker/Excellara_Launch_Page/blob/master/ExcellaraLaunchPage.png?raw=true)
 
 
